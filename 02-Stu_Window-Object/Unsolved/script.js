@@ -13,4 +13,3 @@ console.log(document.documentElement);
 // TODO: What will the following line of code log?
 // Will log the head of the document
 console.log(document.head);
-

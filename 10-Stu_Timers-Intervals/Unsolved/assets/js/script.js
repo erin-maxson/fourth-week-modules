@@ -6,26 +6,27 @@ var message =
 var words = message.split(' ');
 
 function countdown() {
-  var timeLeft = 5;
+  var timeLeft = 6;
 
   // TODO: Use the `setInterval()` method to call a function to be executed every 1000 milliseconds
   var timeInterval = setInterval(function () {
-    //
     // YOUR CODE HERE
    timeLeft--;
     timerEl.textContent = timeLeft + " seconds left until word time!";
 
-    if (timeLeft === 0) {
+  if (timeLeft === 0) {
       // Stops execution of action at set interval
       clearInterval(timeLeft);
+      displayMessage();
     }
 
   }, 1000);
+
 }
 
 // Displays the message one word at a time
 function displayMessage() {
-  var wordCount = 20;
+  var wordCount = 0;
 
   // Uses the `setInterval()` method to call a function to be executed every 1000 milliseconds
   var msgInterval = setInterval(function () {

@@ -12,8 +12,15 @@ function countdown() {
   var timeInterval = setInterval(function () {
     //
     // YOUR CODE HERE
-    //
-  });
+   timeLeft--;
+    timerEl.textContent = timeLeft + " seconds left until word time!";
+
+    if (timeLeft === 0) {
+      // Stops execution of action at set interval
+      clearInterval(timerInterval);
+    }
+
+  }, 1000);
 }
 
 // Displays the message one word at a time
@@ -26,6 +33,8 @@ function displayMessage() {
     if (words[wordCount] === undefined) {
       // Use `clearInterval()` to stop the timer
       clearInterval(msgInterval);
+      sendMessage()
+
     } else {
       // Display one word of the message
       mainEl.textContent = words[wordCount];

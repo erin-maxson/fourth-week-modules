@@ -7,11 +7,21 @@ function setCounterText() {
   countEl.textContent = count;
 }
 
-// TODO: Add event listener to increment button
-incrementEl.addEventListener("click", function () {
-  count = i++
+//TODO: Add event listener to increment button
+incrementEl.addEventListener("click", function() {
+  //If clicking add increment, add number
+  count++;
+  console.log("incrementEl");
+  setCounterText();
+} )
+
+//TODO: Add event listener to decrement button 
+decrementEl.addEventListener("click", function() {
+ //If clicking decrement, decrease number
+if (count > 0) {
+  count--;
+  console.log("decrementEl");
+  setCounterText();
 }
-// TODO: Add event listener to decrement button 
-decrementEl.addEventListener("click", function () {
-  count = -i++
-}
+
+})

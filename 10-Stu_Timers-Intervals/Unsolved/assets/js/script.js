@@ -14,12 +14,22 @@ function countdown() {
    timeLeft--;
     timerEl.textContent = timeLeft + " seconds left until word time!";
 
-  if (timeLeft === 0) {
-      // Stops execution of action at set interval
-      clearInterval(timeLeft);
-      // Calls the function to create and display the split message
-      displayMessage();
+  if (timeLeft > 1) {
+    timerEl.textContent=timeLeft + " seconds remaining"
     }
+
+  else if (timeLeft === 1) {
+    timerEl.textContent=timeLeft + " second remaining"
+  }
+
+  else {
+    clearInterval(timeLeft);
+    // Calls the function to create and display the split message
+    displayMessage();
+  }
+
+  console.log(timeLeft);
+
 
   }, 1000);
 

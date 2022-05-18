@@ -17,6 +17,7 @@ function countdown() {
   if (timeLeft === 0) {
       // Stops execution of action at set interval
       clearInterval(timeLeft);
+      // Calls the function to create and display the split message
       displayMessage();
     }
 
